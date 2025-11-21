@@ -30,7 +30,7 @@ class WeatherSettings:
     api_key: str
     base_url: str = "https://api.openweathermap.org/data/2.5/weather"
     default_units: str = "metric"   # Celsius
-    default_language: str = "fr"    # Réponses de l'API en français
+    default_language: str = "fr"    
 
     @classmethod
     def from_env(cls) -> "WeatherSettings":

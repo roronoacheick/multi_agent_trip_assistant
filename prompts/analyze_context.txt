@@ -1,0 +1,33 @@
+Exemples de messages utilisateur :
+
+1. "J’ai un budget de 200€, je suis à Paris, je veux sortir ce week-end et j’aimerais me baigner"
+Sortie attendue :
+{
+  "location": "Paris",
+  "date_range": {
+    "start": "2025-11-22",
+    "end": "2025-11-23"
+  },
+  "budget_total": 200,
+  "preferences": ["sortir", "se baigner"],
+  "people_count": 1
+}
+
+2. "On veut partir à Lyon pour deux jours, on est trois personnes, on a environ 350€"
+Sortie attendue :
+{
+  "location": "Lyon",
+  "date_range": {
+    "start": null,
+    "end": null
+  },
+  "budget_total": 350,
+  "preferences": [],
+  "people_count": 3
+}
+
+Ton rôle :
+- interpréter les expressions temporelles courantes : “ce week-end”, “demain”, “samedi prochain”, etc.
+- reconnaître le budget même si exprimé en texte : “200 balles”, “deux cents euros”.
+- reconnaître les envies même si formulées différemment.
+- deviner que “je” = 1 personne si rien n’est précisé.
