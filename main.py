@@ -3,6 +3,8 @@ from agents.agent_budget_planner import BudgetPlannerAgent
 from agents.agent_weather_checker import WeatherCheckerAgent
 from agents.agent_activity_finder import ActivityFinderAgent
 from agents.agent_lodging_finder import LodgingFinderAgent
+from agents.agent_scenario_builder import ScenarioBuilderAgent
+
 
 
 
@@ -57,6 +59,20 @@ def main():
 
     print("\n[Agent 5] Logements compatibles :")
     print(lodging_options)
+
+
+
+    # --- 6) Agent 6 : Scénarios ---
+    scenario_agent = ScenarioBuilderAgent()
+    scenarios = scenario_agent.build_scenarios(
+        activities=activities,
+        lodging_options=lodging_options,
+        budget_data=budget_data
+    )
+
+    print("\n[Agent 6] Scénarios proposés :")
+    for s in scenarios:
+        print(s)
 
 
 if __name__ == "__main__":
