@@ -1,0 +1,15 @@
+Exemple de sortie attendue :
+
+Option 1 – Économique (≈ 65€)
+• Activité : Bowling Front de Seine (15€)
+• Logement : Auberge Le Parisien (35€)
+• Transport : ≈15€
+Une option simple et pas chère adaptée si tu veux une activité fun sans te ruiner.
+
+Option 2 – Confort (≈ 130€)
+• Activité : Aquaboulevard (35€)
+• Logement : Hôtel simple Porte de Versailles (80€)
+• Transport : ≈15€
+Parfait si tu veux te baigner dans Paris et passer une nuit confortable.
+
+Tu dois toujours utiliser un ton clair, positif et efficace.

@@ -4,6 +4,8 @@ from agents.agent_weather_checker import WeatherCheckerAgent
 from agents.agent_activity_finder import ActivityFinderAgent
 from agents.agent_lodging_finder import LodgingFinderAgent
 from agents.agent_scenario_builder import ScenarioBuilderAgent
+from agents.agent_presenter import PresenterAgent
+
 
 
 
@@ -73,6 +75,19 @@ def main():
     print("\n[Agent 6] Scénarios proposés :")
     for s in scenarios:
         print(s)
+
+
+
+    # --- 7) Agent 7 : Présentation Finale ---
+    presenter = PresenterAgent()
+    final_text = presenter.present(
+        scenarios=scenarios,
+        constraints=parsed_constraints,
+        weather=weather_info
+    )
+
+    print("\n=== Recommandations finales ===")
+    print(final_text)
 
 
 if __name__ == "__main__":
