@@ -2,12 +2,13 @@ from agents.agent_analyze_request import AnalyzeRequestAgent
 from agents.agent_budget_planner import BudgetPlannerAgent
 from agents.agent_weather_checker import WeatherCheckerAgent
 from agents.agent_activity_finder import ActivityFinderAgent
+from agents.agent_lodging_finder import LodgingFinderAgent
+
 
 
 def main():
     print("=== Assistant Multi-Agent – Test Étapes 1 à 4 ===\n")
 
-    # --- 0) Message utilisateur ---
     user_message = input("Entrez votre message : ")
 
     # --- 1) Agent 1 : Analyse de la demande ---
@@ -45,6 +46,17 @@ def main():
     print(activities)
 
     print("\n=== Fin du test (Étapes 1 → 4) ===")
+
+
+    # 5) Agent 5 - Logements
+    lodging_agent = LodgingFinderAgent()
+    lodging_options = lodging_agent.find_all_lodgings(
+        activities=activities,
+        max_lodging_budget=budget_data["max_lodging"]
+    )
+
+    print("\n[Agent 5] Logements compatibles :")
+    print(lodging_options)
 
 
 if __name__ == "__main__":
